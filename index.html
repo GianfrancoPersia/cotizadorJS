@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <title>Document</title>
+        
+    </head>
+<body>
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>COTIZAR SEGURO</h3>
+                        <form class="requires-validation" novalidate>
+
+                            <div class="col-md-12">
+                                <select id="selectMarca" onchange="verificarMarca()" class="form-select mt-3">
+                                    <option selected disabled value="">Marca</option>
+                                    <option id="volkswagen" value="volkswagen">Volkswagen</option>
+                                    <option id="nissan" value="nissan">Nissan</option>
+                                    <option id="ford" value="ford">Ford</option>
+                                </select>
+                            </div>
+                    
+                            <div id="contVolkswagen" class="col-md-12">
+                                <select id="selectVolkswagen" onchange="verificarModelo()" class="form-select mt-3">
+                                    <option selected disabled value="">Modelo</option>
+                                    <option id="gol" value="gol">Gol</option>
+                                    <option id="amarok" value="amarok">Amarok</option>
+                                    <option id="polo" vpolo="ford">Polo</option>
+                                </select>
+                            </div>
+                    
+                            <div id="contNissan" class="col-md-12">
+                                <select id="selectNissan" onchange="verificarModelo()" class="form-select mt-3">
+                                    <option selected disabled value="">Modelo</option>
+                                    <option id="sentra" value="sentra">Sentra</option>
+                                    <option id="versa" value="versa">Versa</option>
+                                    <option id="kicks" vpolo="kicks">Kicks</option>
+                                </select>
+                            </div>
+                    
+                            <div id="contFord" class="col-md-12">
+                                <select id="selectFord" onchange="verificarModelo()" class="form-select mt-3">
+                                    <option selected disabled value="">Modelo</option>
+                                    <option id="ka" value="ka">Ka</option>
+                                    <option id="koga" value="koga">Koga</option>
+                                    <option id="mondeo" vpolo="mondeo">Mondeo</option>
+                                </select>
+                            </div>
+                    
+                            <div class="contAnio col-md-12 ">
+                                <select name="year" id="anio" onchange="verificarAnio()" class="form-select mt-3">
+                                    <option selected disabled value="">Año</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                </select>
+                            </div>
+
+                            <div class="checkboxPlan">
+                                <label class="labelPlan" >Plan</label>
+                                <div class="contInputs">
+                                    <input onchange="check()"
+                                        type="radio"
+                                        name="plan"
+                                        value="a"
+                                        class="inputRadio"
+                                        id="radio_planA"
+                                    /> A (basic)
+                                </div>
+                                <div class="contInputs">
+                                    <input onchange="check()"
+                                        type="radio"
+                                        name="plan"
+                                        value="b"
+                                        class="form-check-input"
+                                        id="radio_planB"
+                                    /> B (stardart)
+                                </div>
+                                <div class="contInputs">
+                                    <input onchange="check()"
+                                        type="radio"
+                                        name="plan"
+                                        value="c"
+                                        class="form-check-input"
+                                        id="radio_planC"
+                                    /> C (premium) 
+                                </div>
+                            </div>
+        <div id="cuadroPlanes"></div>
+
+        <div class="form-button mt-3">
+            <button id="cotizacion" type="submit" class="btn btn-primary" >COTIZAR</button> 
+        </div>
+        
+
+        <div id="resumen" style="display: none"></div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+    "planA":[
+        {
+            "id": "1",
+            "nombre": "A",
+            "precio": 8500,
+            "descripcion": "responsabilidad civil cotra 3ros"
+        }
+    ],
+    "planB":[
+        {
+            "id": "2",
+            "nombre": "B",
+            "precio": 10500,
+            "descripcion": "responsabilidad civil cotra 3ros, robo e incendio"
+        }
+    ],
+    "planC":[
+        {
+            "id": "3",
+            "nombre": "C",
+            "precio": 15000,
+            "descripcion": "3ros completo"
+        }
+    ]
+
+}
+
+
+
+
+
+
+

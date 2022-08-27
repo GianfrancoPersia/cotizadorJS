@@ -1,5 +1,22 @@
-let marca=""
-function verificarMarca(){
+
+// function verificarMarca(){
+//     if (document.getElementById("selectMarca").value =="volkswagen"){
+//         marca = (document.getElementById("contVolkswagen").style.display = "block");
+//         marca = "volkswagen"
+//         console.log(marca)
+//     }else if (document.getElementById("selectMarca").value =="nissan"){
+//         marca = (document.getElementById("contNissan").style.display = "block");
+//         marca = "nissan"
+//         console.log(marca)
+//     }else if (document.getElementById("selectMarca").value =="ford"){
+//         marca = (document.getElementById("contFord").style.display = "block");
+//         marca = "ford"
+//         console.log(marca)
+//     }
+// }
+let marca =""
+
+btn_marca.addEventListener("click",function(){
     if (document.getElementById("selectMarca").value =="volkswagen"){
         marca = (document.getElementById("contVolkswagen").style.display = "block");
         marca = "volkswagen"
@@ -13,7 +30,9 @@ function verificarMarca(){
         marca = "ford"
         console.log(marca)
     }
-}
+
+})
+
 
 let modelo="";
 function verificarModelo(){

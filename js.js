@@ -1,43 +1,31 @@
 
-// function verificarMarca(){
-//     if (document.getElementById("selectMarca").value =="volkswagen"){
-//         marca = (document.getElementById("contVolkswagen").style.display = "block");
-//         marca = "volkswagen"
-//         console.log(marca)
-//     }else if (document.getElementById("selectMarca").value =="nissan"){
-//         marca = (document.getElementById("contNissan").style.display = "block");
-//         marca = "nissan"
-//         console.log(marca)
-//     }else if (document.getElementById("selectMarca").value =="ford"){
-//         marca = (document.getElementById("contFord").style.display = "block");
-//         marca = "ford"
-//         console.log(marca)
-//     }
-// }
 let marca =""
 
 btn_marca.addEventListener("click",function(){
     if (document.getElementById("selectMarca").value =="volkswagen"){
         marca = (document.getElementById("contVolkswagen").style.display = "block");
         marca = "volkswagen"
+        localStorage.setItem(marca.value);
         console.log(marca)
     }else if (document.getElementById("selectMarca").value =="nissan"){
         marca = (document.getElementById("contNissan").style.display = "block");
         marca = "nissan"
+        localStorage.setItem(marca.value);
         console.log(marca)
     }else if (document.getElementById("selectMarca").value =="ford"){
         marca = (document.getElementById("contFord").style.display = "block");
         marca = "ford"
+        localStorage.setItem(marca.value);
         console.log(marca)
     }
-
-})
+});
 
 
 let modelo="";
 function verificarModelo(){
     if (document.getElementById("selectVolkswagen").value==="gol"){
         modelo="gol"
+        localStorage.setItem(modelo.value)
         console.log(modelo)
     }else if (document.getElementById("selectVolkswagen").value==="amarok"){
         modelo="amarok"
@@ -128,18 +116,30 @@ function check(){
 }
 
 cotizacion.addEventListener("click",function(){
-    class CotizacionAuto {
-        constructor(marca, modelo,anio) {
-            this.marca = marca;
-            this.modelo = modelo;
-            this.anio = anio;
-        }
+    // class CotizacionAuto {
+    //     constructor(marca, modelo,anio) {
+    //         this.marca = marca;
+    //         this.modelo = modelo;
+    //         this.anio = anio;
+    //     }
+    // }
+    // const personax = new CotizacionAuto(
+    //     marca.value,modelo,anio.value
+    //     );
+    // console.log(personax)
+
+    if(marca ===""|| anio ==="" || modelo ==="" ){
+        
+        Swal.fire({
+            icon:'error',
+            title:'Error',
+            text: 'Falta de selección'
+        })
     }
-    const personax = new CotizacionAuto(
-        marca.value,modelo,anio.value
-        );
-    console.log(personax);
-})
+    // else {
+    //     Swal.fire({cotizacion final})
+    // }
+});
 
 
 
